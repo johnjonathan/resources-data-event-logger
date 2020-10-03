@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Simplus Resources",
+    "type": "object",
+    "properties": {
+        "companyId": {
+            "description": "Company that is requesting the resource",
+            "type": "integer"
+        },
+        "productId": {
+            "description": "The unique identifier for a product",
+            "type": "string",
+            "pattern": "^[0-9]+$"
+        },
+        "action": {
+            "description": "The action that requested the resource",
+            "type": "string",
+            "enum": ["API", "PLATFORM"]
+        },
+        "resource": {
+            "description": "The URI of the requested Resource",
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https://"
+        }
+    },
+    "required": ["companyId", "productId", "action", "resource"]
+}
