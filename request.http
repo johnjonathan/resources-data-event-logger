@@ -1,0 +1,11 @@
+POST /dev/resources/logs HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+
+{
+	"companyId": 28,
+	"productId": "194804",
+	"action": "API",
+	"version": "1",
+	"resource": "https://img.simplustec.com.br/product_images/7894900614008/1/7894900614008_12_1_1200_72_RGB.png"
+}

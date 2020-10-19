@@ -1,0 +1,28 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "node": "current"
+                }
+            }
+        ],
+        "@babel/preset-typescript"
+    ],
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "alias": {
+                    "@services": "./src/services",
+                    "@exceptions": "./src/exceptions",
+                    "@functions": "./src/functions",
+                    "@config": "./src/config",
+                    "@models": "./src/models"
+                }
+            }
+        ]
+    ],
+    "ignore": ["**/*.spec.ts"]
+}
