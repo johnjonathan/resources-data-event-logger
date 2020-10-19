@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 # File created using '.gitignore Generator' for Visual Studio Code: https://bit.ly/vscode-gig
 
 # Created by https://www.toptal.com/developers/gitignore/api/vscode,sonarqube,sonar,serverless,node,intellij+all,yarn
 # Edit at https://www.toptal.com/developers/gitignore?templates=vscode,sonarqube,sonar,serverless,node,intellij+all,yarn
+=======
+
+# Created by https://www.toptal.com/developers/gitignore/api/node,serverless,vscode,intellij+all
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,serverless,vscode,intellij+all
+>>>>>>> 1237b2dd46cddac820f6fe4db4b20474c3c25cf6
 
 ### Intellij+all ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
@@ -207,6 +213,7 @@ dist
 # Ignore build directory
 .serverless
 
+<<<<<<< HEAD
 ### Sonar ###
 #Sonar generated dir
 /.sonar/
@@ -223,6 +230,8 @@ dist
 # SonarLint working directories, configuration files (including credentials)
 .sonarlint/
 
+=======
+>>>>>>> 1237b2dd46cddac820f6fe4db4b20474c3c25cf6
 ### vscode ###
 .vscode/*
 !.vscode/settings.json
