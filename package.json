@@ -5,7 +5,7 @@
     "scripts": {
         "local": "serverless offline start",
         "dev": "ts-node-dev -r tsconfig-paths/register -r dotenv/config --respawn --transpile-only --ignore-watch node_modules --no-notify src/functions/server.ts",
-        "test": "jest --coverage --ci --silent",
+        "test": "jest --coverage --ci",
         "sonar-scanner": "node sonar.scanner.js"
     },
     "dependencies": {
