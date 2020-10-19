@@ -14,6 +14,7 @@ export const entrypoint: APIGatewayProxyHandlerV2 = async (event) => {
         await eventLog.putEvent(eventBody)
         return okResponse()
     } catch (error) {
+        console.log('ERROR ', error)
         logger.error(`Unable to create event log: ${error}`)
         return badRequestResponse()
     }
