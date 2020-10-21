@@ -6,6 +6,7 @@
         "local": "serverless offline start",
         "dev": "ts-node-dev -r tsconfig-paths/register -r dotenv/config --respawn --transpile-only --ignore-watch node_modules --no-notify src/functions/server.ts",
         "test": "jest --coverage --ci --silent",
+        "local-test": "jest --coverage --ci",
         "sonar-scanner": "node sonar.scanner.js"
     },
     "dependencies": {
@@ -26,6 +27,7 @@
         "@types/jest": "^26.0.14",
         "@types/node": "^10.12.18",
         "@types/serverless": "^1.72.5",
+        "@yarnpkg/pnpify": "^2.3.3",
         "aws-sdk": "^2.773.0",
         "aws-sdk-mock": "^5.1.0",
         "babel-loader": "^8.1.0",

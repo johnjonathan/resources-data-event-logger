@@ -1,6 +1,7 @@
 import { ResourceEventBody } from '@models/resource-event-body'
 
 export class EventLogService {
+    //@ts-ignore
     public async putEvent(eventBody: ResourceEventBody) {
         return {
             FailedEntryCount: 0,

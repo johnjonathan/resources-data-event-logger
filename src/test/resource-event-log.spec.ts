@@ -54,6 +54,6 @@ describe('Test for `resources-data-logger` event', () => {
     })
 
     afterEach(() => {
-        AWSMock.restore('EventBridge')
+        // AWSMock.restore('EventBridge')
     })
 })
