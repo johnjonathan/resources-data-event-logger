@@ -2334,6 +2334,7 @@ __metadata:
     "@types/node": ^10.12.18
     "@types/serverless": ^1.72.5
     aws-sdk: ^2.773.0
+    aws-sdk-mock: ^5.1.0
     babel-loader: ^8.1.0
     babel-plugin-module-resolver: ^4.0.0
     dotenv: ^8.2.0
@@ -2357,6 +2358,7 @@ __metadata:
     serverless-offline: ^6.8.0
     serverless-prune-plugin: ^1.4.3
     serverless-webpack: ^5.3.5
+    sinon: ^9.2.0
     sonarqube-scanner: ^2.7.0
     source-map-support: ^0.5.10
     tape: ^5.0.1
@@ -2392,7 +2394,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sinonjs/commons@npm:^1.7.0":
+"@sinonjs/commons@npm:^1, @sinonjs/commons@npm:^1.6.0, @sinonjs/commons@npm:^1.7.0, @sinonjs/commons@npm:^1.8.1":
   version: 1.8.1
   resolution: "@sinonjs/commons@npm:1.8.1"
   dependencies:
@@ -2401,12 +2403,40 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sinonjs/fake-timers@npm:^6.0.1":
+"@sinonjs/fake-timers@npm:^6.0.0, @sinonjs/fake-timers@npm:^6.0.1":
   version: 6.0.1
   resolution: "@sinonjs/fake-timers@npm:6.0.1"
   dependencies:
     "@sinonjs/commons": ^1.7.0
   checksum: 64458b908773638dda08b555a00e6fbbbc679735348291dc1b7f437ada2f60242537fdc48e4ee82d2573d86984ec87e755b66a96c0ed9ebf0f46b4c6687ccde2
+  languageName: node
+  linkType: hard
+
+"@sinonjs/formatio@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "@sinonjs/formatio@npm:5.0.1"
+  dependencies:
+    "@sinonjs/commons": ^1
+    "@sinonjs/samsam": ^5.0.2
+  checksum: 88a5b635f8bf088a7610d92d242bea22b9f69fbbc8d3fdace1989995f7f78d463ef14ab834e549cee846b6d13c584496e53bbbde2ac711b0ccfee0a95440c5ae
+  languageName: node
+  linkType: hard
+
+"@sinonjs/samsam@npm:^5.0.2, @sinonjs/samsam@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "@sinonjs/samsam@npm:5.2.0"
+  dependencies:
+    "@sinonjs/commons": ^1.6.0
+    lodash.get: ^4.4.2
+    type-detect: ^4.0.8
+  checksum: 744832bd12140eca2f122c7cc19830a8335969447730723712919df8fac12923ad4f712c7468e7b08f7b75f13bea4f8ed951e9750bf539638c3a7bb88a35cdd6
+  languageName: node
+  linkType: hard
+
+"@sinonjs/text-encoding@npm:^0.7.1":
+  version: 0.7.1
+  resolution: "@sinonjs/text-encoding@npm:0.7.1"
+  checksum: fbc2abff23dce7f8842a64c61a4183a9300b03b8b4f03dc2739c8172fd3e401ed8f28fb1c5aac85b3cc0935f69bdb9823dd864a2e22110626751ff855879a76a
   languageName: node
   linkType: hard
 
@@ -3519,7 +3549,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aws-sdk@npm:*, aws-sdk@npm:^2.624.0, aws-sdk@npm:^2.772.0, aws-sdk@npm:^2.773.0":
+"aws-sdk-mock@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "aws-sdk-mock@npm:5.1.0"
+  dependencies:
+    aws-sdk: ^2.637.0
+    sinon: ^9.0.1
+    traverse: ^0.6.6
+  checksum: 2c85ba293a27e8aa7cfe28eadc4b1ad95156639dd239bc3355f3e18865af319ce4e51da76673e529158dd5f01a8a39ede7e360ae3089c37f89cf1e673cc6b556
+  languageName: node
+  linkType: hard
+
+"aws-sdk@npm:*, aws-sdk@npm:^2.624.0, aws-sdk@npm:^2.637.0, aws-sdk@npm:^2.772.0, aws-sdk@npm:^2.773.0":
   version: 2.773.0
   resolution: "aws-sdk@npm:2.773.0"
   dependencies:
@@ -5420,7 +5461,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diff@npm:^4.0.1":
+"diff@npm:^4.0.1, diff@npm:^4.0.2":
   version: 4.0.2
   resolution: "diff@npm:4.0.2"
   checksum: 81b5cd7ddde6f0ba2a532d434cfdca365aedd6cc62bb133e851e66e071d40382a30924a07c1034bd3d5a2e332146f64514b73c06fe2ebc0490a67f0c98da79fb
@@ -8471,6 +8512,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"isarray@npm:0.0.1":
+  version: 0.0.1
+  resolution: "isarray@npm:0.0.1"
+  checksum: daeda3c23646200b0b464b7a9030d10008d7701fc6b7a1b45cafe42b4f4d2dde20835b56f19a49e04bb218245b7f7a2bcc6d0f696cff3711e4eddaa2031c611f
+  languageName: node
+  linkType: hard
+
 "isarray@npm:1.0.0, isarray@npm:^1.0.0, isarray@npm:~1.0.0":
   version: 1.0.0
   resolution: "isarray@npm:1.0.0"
@@ -9466,6 +9514,13 @@ fsevents@^1.2.7:
     readable-stream: ~2.3.6
     set-immediate-shim: ~1.0.1
   checksum: 6b5e86e7101b2162cedb88979fbb0c9bc83522d143bc29e582b9cc2dcfe9a12be299cbfa32a58b44a51df1621633dd15b5f0f8e9625c8d4070144d80d7489393
+  languageName: node
+  linkType: hard
+
+"just-extend@npm:^4.0.2":
+  version: 4.1.1
+  resolution: "just-extend@npm:4.1.1"
+  checksum: 9dec0ba527809ca813f98dea1e54e60f6901ebdad475aa2a6c487c9873c81d71c783feebacd1ad472309c07413201c3af2ea5abd68f0b0333b5162f474565ad7
   languageName: node
   linkType: hard
 
@@ -10569,6 +10624,19 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"nise@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "nise@npm:4.0.4"
+  dependencies:
+    "@sinonjs/commons": ^1.7.0
+    "@sinonjs/fake-timers": ^6.0.0
+    "@sinonjs/text-encoding": ^0.7.1
+    just-extend: ^4.0.2
+    path-to-regexp: ^1.7.0
+  checksum: 5ead54f4f35680b121f623099ccaee4bde3208167c11c28ccebcc1810ff6053f4e8093fcbfefbc7fa6d12e0a7a2488901da976127fbda2252a999c623543968e
+  languageName: node
+  linkType: hard
+
 "node-abi@npm:^2.7.0":
   version: 2.19.1
   resolution: "node-abi@npm:2.19.1"
@@ -11416,6 +11484,15 @@ fsevents@^1.2.7:
   version: 1.0.6
   resolution: "path-parse@npm:1.0.6"
   checksum: 2eee4b93fb3ae13600e3fca18390d9933bbbcf725a624f6b8df020d87515a74872ff6c58072190d6dc75a5584a683dc6ae5c385ad4e4f4efb6e66af040d56c67
+  languageName: node
+  linkType: hard
+
+"path-to-regexp@npm:^1.7.0":
+  version: 1.8.0
+  resolution: "path-to-regexp@npm:1.8.0"
+  dependencies:
+    isarray: 0.0.1
+  checksum: 4c0d9aaf3fc55db0b2d9aab379856acbf4e437f2252bbc2a178aec9f707c8457f8084ea6243a80e0b37c8c1c20d23e918cd43e772a7e71142a8ad67af699686b
   languageName: node
   linkType: hard
 
@@ -13039,6 +13116,21 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"sinon@npm:^9.0.1, sinon@npm:^9.2.0":
+  version: 9.2.0
+  resolution: "sinon@npm:9.2.0"
+  dependencies:
+    "@sinonjs/commons": ^1.8.1
+    "@sinonjs/fake-timers": ^6.0.1
+    "@sinonjs/formatio": ^5.0.1
+    "@sinonjs/samsam": ^5.2.0
+    diff: ^4.0.2
+    nise: ^4.0.4
+    supports-color: ^7.1.0
+  checksum: b3db80ed30c61dbba8a45cc5617388fed3757eb99eb808d28dc87bd95cdf8a6b0f4bac748ce31b78bdf15febc46685cea93f68bb42e2601706c4ecfb018af831
+  languageName: node
+  linkType: hard
+
 "sisteransi@npm:^1.0.0, sisteransi@npm:^1.0.4":
   version: 1.0.5
   resolution: "sisteransi@npm:1.0.5"
@@ -14346,7 +14438,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"type-detect@npm:4.0.8":
+"type-detect@npm:4.0.8, type-detect@npm:^4.0.8":
   version: 4.0.8
   resolution: "type-detect@npm:4.0.8"
   checksum: e01dc6ac9098192a7859fb86c7b4073709a4e13a5cc02c54d54412378bb099563fda7a7a85640f33e3a7c2e8189182eb1511f263e67f402b2d63fe81afdde785

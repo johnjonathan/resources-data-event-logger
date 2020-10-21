@@ -3,6 +3,7 @@ export interface ResourceEventBody {
     productId: string
     resource: string
     shortId: string
+    action?: string
 }
 
 export type ResponseBody = {

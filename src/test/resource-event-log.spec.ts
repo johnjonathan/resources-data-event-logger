@@ -1,9 +1,22 @@
+import * as AWSMock from 'aws-sdk-mock'
+import * as AWS from 'aws-sdk'
+// import { EventBridge } from 'aws-sdk'
+
 import { entrypoint } from '@functions/resource-data-event-logger'
 import { StatusCodes } from 'http-status-codes'
 import 'jest-extended'
 import { APIGatewayProxyEventV2, APIGatewayProxyStructuredResultV2, Context } from 'aws-lambda'
 
+// import { EventLogService } from '@services/event-log-service'
+jest.mock('@services/event-log-service')
+
 describe('Test for `resources-data-logger` event', () => {
+    beforeAll(async (done) => {
+        //get requires env vars
+        AWSMock.setSDKInstance(AWS)
+        done()
+    })
+
     test('Should create event to be logged', async () => {
         const event = {
             body: JSON.stringify({
@@ -38,5 +51,9 @@ describe('Test for `resources-data-logger` event', () => {
         expect(responseBody.statusCode).toEqual(StatusCodes.BAD_REQUEST)
         expect(responseBody.body).toBeTruthy()
         expect(responseBody.body).toInclude('error')
+    })
+
+    afterEach(() => {
+        AWSMock.restore('EventBridge')
     })
 })
